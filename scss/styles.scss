@@ -2,7 +2,6 @@
 *:before,
 *:after {
     box-sizing: border-box;
-    transition: all 1.5s;
 }
 
 body {
@@ -32,11 +31,9 @@ body {
     height: 205px;
     margin: 10px;
     position: relative;
-    perspective: 1000px;
     transition: all 1.5s;
     transform-style: preserve-3d;
     cursor: pointer;
-    user-select: none;
 
     .front,
     .back {
@@ -105,8 +102,7 @@ body {
 
     @for $i from 1 through 24 {
         &:nth-child(#{$i}) {
-            animation: flip-#{random(10)} #{random(5)}s linear #{random(5)}s alternate;
-
+            animation: flip-#{random(8)} #{random(8)}s linear #{random(5)}s alternate;
         }
     }
 
@@ -129,5 +125,4 @@ body {
             transform: rotateY(0deg);
         }
     }
-
 }
